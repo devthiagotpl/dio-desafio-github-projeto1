@@ -1,0 +1,6 @@
+one/innovation/digital/classes/usuario/SuperUsuario.java
+ one.innovation.digital.classes.usuario.SuperUsuario
+one/innovation/digital/classes/Programa.java
+ one.innovation.digital.classes.Programa
+one/innovation/digital/classes/usuario/ProgramaDoSuperUsuario.java
+ one.innovation.digital.classes.usuario.ProgramaDoSuperUsuario

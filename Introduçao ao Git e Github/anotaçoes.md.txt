@@ -1,0 +1,153 @@
+# Git e GitHub
+
+***Criador: Linux Tovarld***
+
+1- Controle de versão
+
+2 - Armazenamento em nuvem
+
+3 - Trabalho em equipe
+
+4 - Melhorar seu código
+
+5 - Reconhecimento
+
+***Comandos  Windows:***
+
+**dir** - mostrar todos os diretórios dentro do caminho.
+
+**cls** - Limpar
+
+**cd** - para ir ate algum diretório especifico
+
+**cd ..** - retroceder o diretório anterior
+
+**TAB** - autocompleta algum comando ou pasta ja conhecida
+
+**mkdir** - criar um diretório ou pasta
+
+**echo** - mostra no terminal o que foi pedido
+
+**del** - deleta apenas os arquivos contido dentro da pasta ou diretório
+
+**rmdir** - deleta o diretório todo
+
+***Comandos Linux:***
+
+ls - mostra os diretorios dentro do caminho.
+
+clear ou CTRL + L - Limpar
+
+cd - para ir ate algum diretorio especifico
+
+cd .. - retroceder o diretorio anterior
+
+echo - print no terminal oq foi pedido
+
+rm -rf - remover todo o diretorio
+
+- SHA1
+- Objetos Fundamentais
+- Sistemas distribuido
+- Segurança
+
+A sigla SHA1 significa Secure Hash Algorithm (Algoritmo de Hash Seguro), é um conjunto de funções hash criptograficas projetadas pela NSA (Agencia de Segurança Nacional dos EUA).
+
+A encriptação gera conjunto de characteres identificador de 40 digitos.
+
+```python
+echo "ola mundo" | openssl sha1
+> (stdio)= fj3ufwij90hjwaeoihfj920hoewhf9023h49fh349h94hf
+```
+
+## ***Objetos Fundamentais (Blobb)***
+
+Tree  tamanho42
+
+\0
+
+Ola mundo
+
+```python
+echo 'conteudo' | git hash-object --stdin
+> fjshd0823hfioh083qhf02f23h80fh09hf09jd9032hdui
+
+echo -e 'blob 9\\0conteudo' | openssl sha1
+> fjshd0823hfioh083qhf02f23h80fh09hf09jd9032hdui
+```
+
+## ***Objetos Fundamentais (Tree)***
+
+- pode apontar tanto para blob ou para outras arvores q consequentemente pode apontar para outros blob.
+
+Tree <tamanho>
+
+\0
+
+```
+     SHA1   arquivo
+```
+
+blob aihd8a texto.txt
+
+## *Objetos Fundamentais (Commit)*
+
+- o commit aponta para arvores q por sua vez aponta para outras arvores
+- Se mudar qualquer coisa dentro de um arquivo ira refletir na arvores q por sua vez vai refletir no seu commit.( linha do tempo)
+
+tree           a8dha89
+
+parente     uadha87
+
+autor         perkles
+
+mensagem “inicia …”
+
+timestamp
+
+**OBS:** **SHA1 desse commit é o hash de toda a essa informação.**
+
+## ***Chaves SSH e Tokens***
+
+Chave SSH
+
+(/c/Users/thiag/.ssh/id_ed25519)
+
+## *Comandos Principais do GIT*
+
+- git init
+- git add
+- git commit
+
+### *Criando um Repositório*
+
+**ls -a** : mostra arquivos ocultos.
+
+**git init**: cria o .git.(onde fica todos os arquivos referente ao repositório.)
+
+### *Configurando o git*
+
+git config —global [user.email](http://user.email) “seu email”
+
+git config —global [user.name](http://user.name)  seu login
+
+### *Criando Commit*
+
+**git add ***: adiciona todos os arquivos modificados.
+
+**git commit -m** “commit inicial”: marca o commit de alteração do arquivo.
+
+### *Empurrando para o Github*
+
+1. git remote add origin “Link do repositorio do git em HTTPS”
+2. **git remote -v**: visualiza o repositorio
+3. **git push origin master**: cria o repositório remoto direto no gtihub, enviando todos os dados e seus commit feito.
+
+### *Resolvendo conflitos*
+
+**git pull origin master**
+
+
+
+Link para download do Git: https://git.scm.com/download
+O git Bash é um terminal extendido para otimizar o uso do Git.
